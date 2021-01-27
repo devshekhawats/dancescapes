@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+}
+
+#bg-video-element {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -20;
+}
+
+#hero {
+    background: rgba(0,0,0,0.8);
+}
+
+#hero-text {
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    font-size: 156px;
+    height: 0px;
+    overflow: hidden;
+    animation: appearFromBelow 2s cubic-bezier(0.4, 0, 0.2, 1) 400ms 1 forwards;
+}
+
+
+#hero-subtitle {
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    font-size: x-large;
+    font-weight: lighter;
+    opacity: 0;
+    animation: subtextAppear 2s cubic-bezier(0.4, 0, 0.2, 1) 400ms 1 forwards;
+}
+
+#intro {
+    background-color: transparent;
+    height: 400px;
+}
+
+#location {
+    background-color: transparent;
+    width: 100vw;
+    border-top: 10px solid #000;
+    border-bottom: 10px solid #000;
+}
+
+#location-header {
+    width: 50%;
+    padding: 30px 20px;
+    background-color: #000;
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    color: #fff;
+}
+
+#location-container {
+    padding: 30px 20px;
+    width: 50%;
+}
+
+#location-container iframe{
+    width: 100%;
+    height: 391px;
+    border: 3px solid #000;
+}
+
+
+@media only screen and (max-width: 786px) {
+    #hero-text {
+        font-size: 100px;
+        animation: appearFromBelowSM 2s cubic-bezier(0.4, 0, 0.2, 1) 400ms 1 forwards;
+    }
+
+    #location {
+        flex-wrap: wrap;
+    }
+
+    #location-header {
+        font-size: 60px;
+        width: 100%;
+    }
+
+    #location-container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 485px) {
+    #hero-text {
+        font-size: 80px;
+        animation: appearFromBelowXS 2s cubic-bezier(0.4, 0, 0.2, 1) 400ms 1 forwards;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #hero-text {
+        font-size: 60px;
+        animation: appearFromBelowXS 2s cubic-bezier(0.4, 0, 0.2, 1) 400ms 1 forwards;
+    }
+
+    #location-header {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #location-header {
+        font-size: 40px;
+    }
+}
+
+
+
+@keyframes appearFromBelow {
+    from {
+        height: 0px;
+    }
+
+    to {
+        height: 190px;
+    }
+}
+
+@keyframes appearFromBelowSM {
+    from {
+        height: 0px;
+    }
+
+    to {
+        height: 130px;
+    }
+}
+
+@keyframes appearFromBelowXS {
+    from {
+        height: 0px;
+    }
+
+    to {
+        height: 100px;
+    }
+}
+
+@keyframes subtextAppear {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
